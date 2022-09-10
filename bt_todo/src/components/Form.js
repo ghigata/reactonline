@@ -53,25 +53,17 @@ function Form(props) {
   function handleChange(event) {
     event.preventDefault();
     let obj = {
-                  id      : '',
-                  name    : '',
-                  level   : 0
+                  task_id      : currentItem.task_id,
+                  task_name    : currentItem.task_name,
+                  task_level   : currentItem.task_level
               }
 
-    if(selectedItem) {
-      obj = {
-                    id      : selectedItem.id,
-                    name    : selectedItem.name,
-                    level   : selectedItem.level
-                }
-    }
-
     if(event.target.name === 'task_name') {
-      obj.name = event.target.value;
+      obj.task_name = event.target.value;
     } else if (event.target.name === 'task_level') {
-      obj.level = event.target.value;
+      obj.task_level = event.target.value;
     }
-    setSelectedItem(obj);
+    setCurrentItem(obj);
   }
 
   return (

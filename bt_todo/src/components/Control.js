@@ -2,15 +2,16 @@ import Search from './Search';
 import Sort from './Sort';
 
 function Control(props) {
+  const {items,setTaskItem} = props;
 
   return (
     <div className="row">
       {/* SEARCH : START */}
-      <Search />
+      <Search items={items} setTaskItem={setTaskItem} />
       {/* SEARCH : END */}
 
       {/* SORT : START */}
-      <Sort />
+      <Sort items={items} setTaskItem={setTaskItem} />
       {/* SORT : END */}
 
       {/* ADD : START */}

@@ -17,7 +17,8 @@ function App() {
       {/* TITLE : END */}
 
       {/* CONTROL (SEARCH + SORT + ADD) : START */}
-      <Control />
+      <Control items={taskItem}
+               setTaskItem={setTaskItem} />
       {/* CONTROL (SEARCH + SORT + ADD) : END */}
 
       {/* FORM : START */}
